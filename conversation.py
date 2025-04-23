@@ -16,7 +16,7 @@ def create_thread():
     }
     data = {
             "messages": [{"role": "user", "content": "Hola"}],
-            "tool_resources": {"file_search": {"vector_store_ids": ["vs_67cf151143ec8191b6398d5ee18ad4ad"]}}
+            "tool_resources": {"file_search": {"vector_store_ids": [""]}}
         }
 
     response = requests.post(url, headers=headers, json=data)
@@ -43,7 +43,7 @@ def create_message(thread_id, message):
 
     return response.text
 
-thread_id = "thread_bj5UfQsQ534afB3L0uXjSxcS"
+thread_id = ""
 
 while True:
     

@@ -17,7 +17,7 @@ def create_vector_store():
         "OpenAI-Beta": "assistants=v2"
     }
     data = {
-            "name": "manualexpertonomina",
+            "name": "",
         }
 
     response = requests.post(url, headers=headers, json=data)
@@ -57,7 +57,7 @@ def check_vector_store():
         "OpenAI-Beta": "assistants=v2"
     }
     data = {
-            "name": "idequity1",
+            "name": "",
         }
 
     response = requests.get(url, headers=headers)
@@ -72,12 +72,12 @@ def create_assistant():
     headers = {
         'Content-Type': 'application/json', 
         "Authorization": "Bearer " + key,
-        "OpenAI-Beta": "assistants=v2"
+        "OpenAI-Beta": ""
     }
     data = {
-            "name": "idequity2",
+            "name": "",
             "model": "gpt-4o",
-            "description": "Experto en ejecución de clases DUA",
+            "description": "",
             "instructions": prompts.general,
             "tools": [{"type": "file_search"}],
             "tool_resources": {"file_search": {"vector_store_ids": [vector_store]}},
@@ -100,7 +100,7 @@ def delete_file_vector_store():
         "OpenAI-Beta": "assistants=v2"
     }
     data = {
-            "name": "idequity1",
+            "name": "",
         }
 
     response = requests.delete(url, headers=headers)
